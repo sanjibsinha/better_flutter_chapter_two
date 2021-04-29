@@ -20,6 +20,7 @@ class MaterialDesignOnGenerateRouteApp extends StatelessWidget {
   }
 
   Route<dynamic>? _goToSecondPage(RouteSettings settings) {
+    // check onGenerateRoute doesn't return null
     if (settings.name != '/second') {
       return null;
     }

@@ -1,9 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
-class MaterialDesignApp extends StatelessWidget {
-  const MaterialDesignApp({Key? key}) : super(key: key);
+class MaterialDesignOnGenerateRouteApp extends StatelessWidget {
+  const MaterialDesignOnGenerateRouteApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

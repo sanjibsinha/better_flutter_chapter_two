@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'views/material_design_app.dart';
+import 'views/material_design_on_generate_route_app.dart';
 
 void main() {
-  runApp(MaterialDesignApp());
+  runApp(MaterialDesignOnGenerateRouteApp());
 }
 
 class MyApp extends StatelessWidget {

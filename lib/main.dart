@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'views/material_design_on_generate_route_app.dart';
+// import 'views/material_design_on_generate_route_app.dart';
+import 'views/material_design_theme_control.dart';
 
 void main() {
-  runApp(MaterialDesignOnGenerateRouteApp());
+  runApp(MaterialDesignThemeControl());
 }
 
 class MyApp extends StatelessWidget {

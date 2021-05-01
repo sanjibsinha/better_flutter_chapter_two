@@ -12,10 +12,12 @@ class MaterialDesignThemeControl extends StatelessWidget {
       title: 'Material Design Theme Control',
       home: MaterialDesignCustomTheme(),
       theme: _customTheme(),
+      debugShowCheckedModeBanner: false,
     );
   }
 
   ThemeData _customTheme() {
+    final ThemeData base = ThemeData.light();
     return ThemeData(
       accentColor: Color(0xFF442B2D),
       primaryColor: Color(0xFFFEDBD0),
@@ -38,7 +40,34 @@ class MaterialDesignThemeControl extends StatelessWidget {
       primaryIconTheme: ThemeData.light().primaryIconTheme.copyWith(
             color: Color(0xFF442B2D),
           ),
+      textTheme: _customTextTheme(base.textTheme),
+      primaryTextTheme: _customTextTheme(base.primaryTextTheme),
+      accentTextTheme: _customTextTheme(base.accentTextTheme),
     );
+  }
+
+  TextTheme _customTextTheme(TextTheme base) {
+    return base
+        .copyWith(
+          headline5: base.headline5!.copyWith(
+            fontWeight: FontWeight.w500,
+            fontSize: 26.0,
+          ),
+          headline6: base.headline6!.copyWith(fontSize: 22.0),
+          caption: base.caption!.copyWith(
+            fontWeight: FontWeight.w400,
+            fontSize: 18.0,
+          ),
+          bodyText1: base.bodyText1!.copyWith(
+            fontWeight: FontWeight.w500,
+            fontSize: 16.0,
+          ),
+        )
+        .apply(
+          fontFamily: 'Trajan Pro',
+          displayColor: Color(0xFF442B2D),
+          bodyColor: Color(0xFF883B2D),
+        );
   }
 }
 
@@ -51,10 +80,7 @@ class MaterialDesignCustomTheme extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Material Design Custom Theme',
-          style: TextStyle(
-            fontSize: 20,
-            color: Theme.of(context).primaryColorDark,
-          ),
+          style: Theme.of(context).textTheme.caption,
         ),
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       ),
@@ -122,6 +148,9 @@ class CustomPage extends StatelessWidget {
                       TextButton(
                         child: Text(
                           'CANCEL',
+                          style: TextStyle(
+                            color: Theme.of(context).buttonColor,
+                          ),
                         ),
                         onPressed: () {},
                       ),

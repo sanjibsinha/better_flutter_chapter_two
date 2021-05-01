@@ -19,26 +19,26 @@ class MaterialDesignThemeControl extends StatelessWidget {
   ThemeData _customTheme() {
     final ThemeData base = ThemeData.light();
     return ThemeData(
-      accentColor: Color(0xFF442B2D),
-      primaryColor: Color(0xFFFEDBD0),
-      buttonColor: Color(0xFFFEDBD0),
+      accentColor: const Color(0xFF442B2D),
+      primaryColor: const Color(0xFFFEDBD0),
+      buttonColor: const Color(0xFFFEDBD0),
       scaffoldBackgroundColor: Colors.white,
-      cardColor: Color(0xFF883B2D),
+      cardColor: const Color(0xFF883B2D),
       textSelectionTheme: TextSelectionThemeData(
-        selectionColor: Color(0xFFFEDBD0),
+        selectionColor: const Color(0xFFFEDBD0),
       ),
       errorColor: Colors.red,
       buttonTheme: ThemeData.light().buttonTheme.copyWith(
-            buttonColor: Color(0xFFFEDBD0),
+            buttonColor: const Color(0xFFFEDBD0),
             colorScheme: ThemeData.light().colorScheme.copyWith(
-                  secondary: Color(0xFF442B2D),
+                  secondary: const Color(0xFF442B2D),
                 ),
           ),
       buttonBarTheme: ThemeData.light().buttonBarTheme.copyWith(
             buttonTextTheme: ButtonTextTheme.accent,
           ),
       primaryIconTheme: ThemeData.light().primaryIconTheme.copyWith(
-            color: Color(0xFF442B2D),
+            color: const Color(0xFF442B2D),
           ),
       textTheme: _customTextTheme(base.textTheme),
       primaryTextTheme: _customTextTheme(base.primaryTextTheme),
@@ -65,8 +65,8 @@ class MaterialDesignThemeControl extends StatelessWidget {
         )
         .apply(
           fontFamily: 'Trajan Pro',
-          displayColor: Color(0xFF442B2D),
-          bodyColor: Color(0xFF883B2D),
+          displayColor: const Color(0xFF442B2D),
+          bodyColor: const Color(0xFF883B2D),
         );
   }
 }
